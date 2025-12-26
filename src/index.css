@@ -319,7 +319,7 @@
   [class*="chatContainer"],
   [class*="widget-container"],
   [class*="widgetContainer"] {
-    max-height: 50vh !important;
+    max-height: 25vh !important;
     height: 50vh !important;
     width: calc(100vw - 10px) !important;
     max-width: 100% !important;
