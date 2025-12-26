@@ -1,4 +1,4 @@
-import { Phone, Calendar, Shield, Star } from "lucide-react";
+import { Phone, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roofer.jpg";
 
@@ -43,9 +43,6 @@ const Hero = () => {
             <Button variant="hero" size="xl" className="gap-3">
               <Phone className="w-5 h-5" />
               Call [Your Phone]
-            </Button>
-            <Button variant="hero-secondary" size="icon-lg" className="rounded-lg">
-              <Calendar className="w-5 h-5" />
             </Button>
           </div>
 
