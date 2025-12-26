@@ -6,6 +6,7 @@ import HowWeWork from "@/components/HowWeWork";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import MobileCallBar from "@/components/MobileCallBar";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <MobileCallBar />
     </div>
   );
 };
