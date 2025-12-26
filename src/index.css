@@ -262,32 +262,37 @@
 
 /* QuelpAI Chatbot Widget - Mobile Fixes */
 @media (max-width: 768px) {
-  /* Main chatbot container - limit to 50% of screen height */
-  [id*="quelp"], 
+  /* Force ALL chatbot containers to 50% height */
+  [id*="quelp"],
   [class*="quelp"],
-  [id*="chat-widget"],
-  [class*="chat-widget"],
-  [id*="chatbot"],
-  [class*="chatbot"],
+  [id*="chat"],
+  [class*="chat"],
+  [id*="widget"],
+  [class*="widget"],
   iframe[src*="quelp"],
-  div[style*="position: fixed"][style*="bottom"] {
-    max-width: 95vw !important;
+  div[style*="position: fixed"] {
     max-height: 50vh !important;
+    height: 50vh !important;
+    max-width: 95vw !important;
     bottom: 70px !important;
-    right: 5px !important;
+    right: 8px !important;
     left: auto !important;
     top: auto !important;
-    width: calc(100vw - 10px) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
   }
 
+  /* Target iframe specifically */
+  iframe {
+    max-height: 50vh !important;
+  }
+
   /* Chatbot toggle button - position above sticky bar */
-  [id*="quelp"] button[class*="toggle"],
+  [id*="quelp"] button,
   [class*="quelp"] button,
-  [id*="chat-widget"] button[class*="launcher"],
+  [class*="chat-launcher"],
   [class*="chatbot-launcher"],
-  [class*="chat-launcher"] {
+  button[class*="launcher"] {
     bottom: 75px !important;
     right: 16px !important;
     width: 50px !important;
@@ -298,9 +303,7 @@
   /* Ensure close button is always visible and tappable */
   [id*="quelp"] [class*="close"],
   [class*="quelp"] [class*="close"],
-  [id*="chat-widget"] [class*="close"],
-  [class*="chatbot"] [class*="close"],
-  [class*="chat-close"],
+  [class*="chat"] [class*="close"],
   button[aria-label*="close" i],
   button[aria-label*="Close" i] {
     display: flex !important;
@@ -310,20 +313,5 @@
     min-height: 44px !important;
     z-index: 9999 !important;
     pointer-events: auto !important;
-  }
-
-  /* Chat window and iframe container */
-  [class*="chat-window"],
-  [class*="chatWindow"],
-  [class*="chat-container"],
-  [class*="chatContainer"],
-  [class*="widget-container"],
-  [class*="widgetContainer"] {
-    max-height: 25vh !important;
-    height: 50vh !important;
-    width: calc(100vw - 10px) !important;
-    max-width: 100% !important;
-    bottom: 70px !important;
-    top: auto !important;
   }
 }
