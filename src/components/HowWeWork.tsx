@@ -56,20 +56,20 @@ const HowWeWork = () => {
             </p>
 
             {/* Steps */}
-            <div className="space-y-4 mb-6">
+            <div className="space-y-5 mb-6">
               {steps.map((step) => (
-                <div key={step.number} className="flex flex-col items-center lg:flex-row lg:items-start gap-3 lg:gap-4">
-                  <div className="number-badge flex-shrink-0">
-                    {step.number}
-                  </div>
-                  <div className="text-center lg:text-left">
-                    <h3 className="font-bold text-foreground mb-1 font-sans">
+                <div key={step.number} className="text-left">
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="number-badge flex-shrink-0">
+                      {step.number}
+                    </div>
+                    <h3 className="font-bold text-foreground font-sans text-base">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {step.description}
-                    </p>
                   </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-12">
+                    {step.description}
+                  </p>
                 </div>
               ))}
             </div>
