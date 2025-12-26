@@ -259,3 +259,60 @@
     }
   }
 }
+
+/* QuelpAI Chatbot Widget - Mobile Fixes */
+@media (max-width: 768px) {
+  /* Make chatbot smaller and ensure close button works */
+  [id*="quelp"], 
+  [class*="quelp"],
+  [id*="chat-widget"],
+  [class*="chat-widget"],
+  [id*="chatbot"],
+  [class*="chatbot"] {
+    max-width: 90vw !important;
+    max-height: 70vh !important;
+    bottom: 70px !important; /* Above sticky call bar */
+    right: 10px !important;
+  }
+
+  /* Chatbot toggle button - position above sticky bar */
+  [id*="quelp"] button[class*="toggle"],
+  [class*="quelp"] button,
+  [id*="chat-widget"] button[class*="launcher"],
+  [class*="chatbot-launcher"],
+  [class*="chat-launcher"] {
+    bottom: 75px !important;
+    right: 16px !important;
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 40 !important;
+  }
+
+  /* Ensure close button is always visible and tappable */
+  [id*="quelp"] [class*="close"],
+  [class*="quelp"] [class*="close"],
+  [id*="chat-widget"] [class*="close"],
+  [class*="chatbot"] [class*="close"],
+  [class*="chat-close"],
+  button[aria-label*="close" i],
+  button[aria-label*="Close" i] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Chat window container */
+  [class*="chat-window"],
+  [class*="chatWindow"],
+  [class*="chat-container"],
+  [class*="chatContainer"] {
+    max-height: 65vh !important;
+    width: calc(100vw - 20px) !important;
+    max-width: 380px !important;
+    bottom: 70px !important;
+  }
+}
