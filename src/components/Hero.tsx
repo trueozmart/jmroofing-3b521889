@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-roofer.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <section className="relative min-h-[100svh] flex items-center pt-16 md:pt-20">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -15,46 +15,46 @@ const Hero = () => {
       <div className="absolute inset-0 gradient-hero-overlay" />
       
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 md:px-8 py-16 md:py-24">
+      <div className="relative z-10 container-custom px-5 md:px-8 py-8 md:py-24">
         <div className="max-w-2xl text-center mx-auto lg:text-left lg:mx-0">
           {/* Rating Badge */}
-          <div className="inline-flex items-center gap-2 bg-card/95 backdrop-blur-sm rounded-full px-4 py-2 mb-6 animate-fade-in-up mx-auto lg:mx-0">
+          <div className="inline-flex items-center gap-2 bg-card/95 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-4 md:mb-6 animate-fade-in-up">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
               ))}
             </div>
-            <span className="font-semibold text-foreground">5.0 (300 Reviews)</span>
+            <span className="font-semibold text-foreground text-sm md:text-base">5.0 (300 Reviews)</span>
           </div>
 
           {/* Headline */}
-          <h1 className="heading-display text-primary-foreground mb-4 animate-fade-in-up text-shadow-hero" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-3 md:mb-4 animate-fade-in-up text-shadow-hero font-display" style={{ animationDelay: '0.1s' }}>
             Sydney's Most Trusted{" "}
             <span className="text-accent drop-shadow-lg">Roofing Specialists</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground mb-8 max-w-xl animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base md:text-xl text-primary-foreground mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
             Premium roof repairs, replacements & restorations. Old-school workmanship meets modern warranty protection.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl" className="gap-3">
+          {/* CTA Button - Large touch target for mobile */}
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-6 md:mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <Button variant="hero" size="xl" className="gap-3 w-full sm:w-auto min-h-[56px] text-base">
               <Phone className="w-5 h-5" />
               Call [Your Phone]
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-primary-foreground text-sm animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-accent drop-shadow-md" />
+          {/* Trust Indicators - Stack on mobile */}
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2 text-primary-foreground text-xs md:text-sm animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.4s' }}>
+            <div className="flex items-center gap-1.5">
+              <Shield className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent drop-shadow-md" />
               <span>No obligation</span>
             </div>
-            <span className="opacity-60">•</span>
+            <span className="opacity-60 hidden sm:inline">•</span>
             <span>Licensed & Insured</span>
-            <span className="opacity-60">•</span>
+            <span className="opacity-60 hidden sm:inline">•</span>
             <span>Free quotes</span>
           </div>
         </div>

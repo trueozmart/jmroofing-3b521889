@@ -33,46 +33,44 @@ const Testimonials = () => {
     <section className="section-padding bg-background">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-section text-foreground mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
             What Sydney Homeowners Say
           </h2>
-          <p className="text-body text-muted-foreground">
+          <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
             Real reviews from real customers across Sydney. See why families trust us with their homes.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Testimonials - Horizontal scroll on mobile */}
+        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.author}
-              className={`bg-card rounded-2xl p-6 border border-border card-hover animate-fade-in-up ${
-                index === 4 ? 'lg:col-span-1 md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 border border-border card-hover animate-fade-in-up flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-auto snap-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Quote Icon */}
-              <Quote className="w-8 h-8 text-accent/30 mb-4" />
+              <Quote className="w-6 h-6 md:w-8 md:h-8 text-accent/30 mb-3 md:mb-4" />
               
               {/* Stars */}
-              <div className="flex mb-4">
+              <div className="flex mb-3 md:mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-foreground leading-relaxed mb-6 text-sm">
+              <p className="text-foreground leading-relaxed mb-4 md:mb-6 text-sm line-clamp-4 md:line-clamp-none">
                 "{testimonial.text}"
               </p>
 
               {/* Author */}
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">
+              <div className="border-t border-border pt-3 md:pt-4">
+                <p className="font-semibold text-foreground text-sm md:text-base">
                   {testimonial.author}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs md:text-sm text-muted-foreground">
                   {testimonial.location}
                 </p>
               </div>

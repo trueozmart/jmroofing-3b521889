@@ -29,9 +29,9 @@ const HowWeWork = () => {
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
-          <div className="relative animate-fade-in-up">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Image - Hidden on small mobile, visible md+ */}
+          <div className="relative animate-fade-in-up hidden md:block">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={rooferWorkImage}
@@ -39,8 +39,8 @@ const HowWeWork = () => {
                 className="w-full h-auto object-cover"
               />
               {/* Rating Badge */}
-              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full flex items-center gap-2 font-semibold shadow-lg">
-                <Star className="w-4 h-4 fill-current" />
+              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 font-semibold shadow-lg text-sm md:text-base">
+                <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
                 5.0 Rating
               </div>
             </div>
@@ -48,26 +48,26 @@ const HowWeWork = () => {
 
           {/* Content */}
           <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: '0.1s' }}>
-            <h2 className="heading-section text-foreground mb-3">
-              How We Work: Simple, Transparent, Professional
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
+              How We Work
             </h2>
-            <p className="text-body text-muted-foreground mb-6">
+            <p className="text-sm md:text-lg text-muted-foreground mb-5 md:mb-6 leading-relaxed">
               No surprises. No pressure. Just honest roofing service from start to finish.
             </p>
 
             {/* Steps */}
-            <div className="space-y-5 mb-6">
+            <div className="space-y-4 md:space-y-5 mb-6">
               {steps.map((step) => (
                 <div key={step.number} className="text-left">
-                  <div className="flex items-center gap-3 mb-1">
-                    <div className="number-badge flex-shrink-0">
+                  <div className="flex items-center gap-2.5 md:gap-3 mb-1">
+                    <div className="number-badge flex-shrink-0 w-8 h-8 md:w-10 md:h-10 text-xs md:text-sm">
                       {step.number}
                     </div>
-                    <h3 className="font-bold text-foreground font-sans text-base">
+                    <h3 className="font-bold text-foreground font-sans text-sm md:text-base">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed pl-12">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed pl-10 md:pl-12">
                     {step.description}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ const HowWeWork = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="gold" size="lg" className="gap-3">
+            <Button variant="gold" size="lg" className="gap-3 w-full sm:w-auto min-h-[52px]">
               <Phone className="w-5 h-5" />
               Call [Your Phone]
             </Button>
