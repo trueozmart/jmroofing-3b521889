@@ -269,7 +269,6 @@
   div[style*="z-index: 999"] iframe,
   div[style*="z-index: 9999"] iframe {
     max-height: 50vh !important;
-    height: 50vh !important;
     max-width: calc(100vw - 20px) !important;
     width: calc(100vw - 20px) !important;
     bottom: 70px !important;
