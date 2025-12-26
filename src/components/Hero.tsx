@@ -28,13 +28,13 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-display text-primary-foreground mb-4 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="heading-display text-primary-foreground mb-4 animate-fade-in-up text-shadow-hero" style={{ animationDelay: '0.1s' }}>
             Sydney's Most Trusted{" "}
-            <span className="text-accent">Roofing Specialists</span>
+            <span className="text-accent drop-shadow-lg">Roofing Specialists</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl text-primary-foreground mb-8 max-w-xl animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.2s' }}>
             Premium roof repairs, replacements & restorations. Old-school workmanship meets modern warranty protection.
           </p>
 
@@ -50,14 +50,14 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-primary-foreground/80 text-sm animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-primary-foreground text-sm animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-accent" />
+              <Shield className="w-4 h-4 text-accent drop-shadow-md" />
               <span>No obligation</span>
             </div>
-            <span className="opacity-50">•</span>
+            <span className="opacity-60">•</span>
             <span>Licensed & Insured</span>
-            <span className="opacity-50">•</span>
+            <span className="opacity-60">•</span>
             <span>Free quotes</span>
           </div>
         </div>
