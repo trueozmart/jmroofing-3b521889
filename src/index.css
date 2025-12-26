@@ -260,43 +260,92 @@
   }
 }
 
-/* QuelpAI Chatbot Widget - Mobile Fixes */
+/* ============================================
+   QuelpAI Chatbot Widget - Mobile Overrides
+   Targets: <768px screens
+   ============================================ */
 @media (max-width: 768px) {
-  /* Target the QuelpAI widget iframe container - usually has fixed positioning */
-  body > div[style*="position: fixed"][style*="bottom"],
-  body > div[style*="position: fixed"][style*="right"],
+  
+  /* ----- CHAT WINDOW / IFRAME CONTAINERS ----- */
+  
+  /* Generic fixed-position containers injected by chatbot scripts */
+  body > div[style*="position: fixed"],
   body > iframe[style*="position: fixed"],
-  div[style*="z-index: 999"] iframe,
-  div[style*="z-index: 9999"] iframe {
+  div[style*="z-index: 999"] > iframe,
+  div[style*="z-index: 9999"] > iframe,
+  div[style*="z-index: 99999"] > iframe,
+  div[style*="z-index: 999999"] > iframe,
+  div[style*="z-index: 2147483647"] > iframe {
     max-height: 50vh !important;
-    max-width: calc(100vw - 20px) !important;
-    width: calc(100vw - 20px) !important;
+    height: 50vh !important;
+    max-width: 90vw !important;
+    width: 90vw !important;
+    min-height: unset !important;
+    min-width: unset !important;
     bottom: 70px !important;
-    right: 10px !important;
+    right: 12px !important;
     left: auto !important;
     top: auto !important;
     border-radius: 16px !important;
     overflow: hidden !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
   }
-  
-  /* Target iframes that are full-screen on mobile (likely chatbot popups) */
+
+  /* Override full-screen inline styles on iframes */
   iframe[style*="height: 100%"],
   iframe[style*="height:100%"],
-  iframe[style*="position: fixed"] {
+  iframe[style*="width: 100%"],
+  iframe[style*="width:100%"],
+  iframe[style*="inset: 0"],
+  iframe[style*="top: 0"][style*="left: 0"] {
     max-height: 50vh !important;
     height: 50vh !important;
-    max-width: calc(100vw - 20px) !important;
+    max-width: 90vw !important;
+    width: 90vw !important;
+    min-height: unset !important;
+    min-width: unset !important;
     bottom: 70px !important;
+    right: 12px !important;
+    left: auto !important;
     top: auto !important;
     border-radius: 16px !important;
   }
 
-  /* QuelpAI launcher button - keep in corner above sticky bar */
-  body > div[style*="position: fixed"] button[style*="bottom"],
-  div[style*="z-index: 999"] button,
-  div[style*="z-index: 9999"] button {
-    bottom: 75px !important;
+  /* Target containers that wrap the iframe with high z-index */
+  div[style*="position: fixed"][style*="z-index: 999"],
+  div[style*="position: fixed"][style*="z-index: 9999"],
+  div[style*="position: fixed"][style*="z-index: 99999"],
+  div[style*="position: fixed"][style*="z-index: 999999"],
+  div[style*="position: fixed"][style*="z-index: 2147483647"] {
+    max-height: 50vh !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    width: auto !important;
+    bottom: 70px !important;
+    right: 12px !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  /* ----- LAUNCHER BUTTON ----- */
+  /* Keep floating button above sticky mobile nav bars */
+  
+  body > div[style*="position: fixed"] > button,
+  div[style*="z-index: 999"] > button,
+  div[style*="z-index: 9999"] > button,
+  div[style*="z-index: 99999"] > button,
+  button[style*="position: fixed"],
+  div[style*="position: fixed"] button[style*="bottom"] {
+    bottom: 80px !important;
     right: 16px !important;
-    z-index: 40 !important;
+    z-index: 50 !important;
+  }
+
+  /* ----- BACKDROP / OVERLAY ----- */
+  /* Prevent full-screen dark overlays from blocking content */
+  
+  div[style*="position: fixed"][style*="background"][style*="rgba"],
+  div[style*="position: fixed"][style*="inset: 0"] {
+    display: none !important;
   }
 }
