@@ -8,11 +8,11 @@ const Contact = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Content */}
-          <div className="animate-fade-in-up">
-            <h2 className="heading-section text-foreground mb-4">
+          <div className="animate-fade-in-up text-center lg:text-left">
+            <h2 className="heading-section text-foreground mb-3">
               Ready to Get Your Roof Sorted?
             </h2>
-            <p className="text-body text-muted-foreground mb-10 max-w-lg">
+            <p className="text-body text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0">
               Whether you need a quick repair, a full restoration, or just honest advice about your roof's condition—we're here to help. Call us now or book your free inspection and we'll take care of the rest.
             </p>
 

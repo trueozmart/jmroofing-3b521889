@@ -47,16 +47,16 @@ const HowWeWork = () => {
           </div>
 
           {/* Content */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <h2 className="heading-section text-foreground mb-4">
+          <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: '0.1s' }}>
+            <h2 className="heading-section text-foreground mb-3">
               How We Work: Simple, Transparent, Professional
             </h2>
-            <p className="text-body text-muted-foreground mb-10">
+            <p className="text-body text-muted-foreground mb-6">
               No surprises. No pressure. Just honest roofing service from start to finish.
             </p>
 
             {/* Steps */}
-            <div className="space-y-6 mb-10">
+            <div className="space-y-4 mb-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
                   <div className="number-badge flex-shrink-0">
