@@ -273,7 +273,6 @@
   div[style*="position: fixed"][style*="bottom"] {
     max-width: 95vw !important;
     max-height: 50vh !important;
-    height: 50vh !important;
     bottom: 70px !important;
     right: 5px !important;
     left: auto !important;
