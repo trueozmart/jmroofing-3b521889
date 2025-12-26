@@ -262,17 +262,25 @@
 
 /* QuelpAI Chatbot Widget - Mobile Fixes */
 @media (max-width: 768px) {
-  /* Make chatbot smaller and ensure close button works */
+  /* Main chatbot container - limit to 50% of screen height */
   [id*="quelp"], 
   [class*="quelp"],
   [id*="chat-widget"],
   [class*="chat-widget"],
   [id*="chatbot"],
-  [class*="chatbot"] {
-    max-width: 90vw !important;
-    max-height: 70vh !important;
-    bottom: 70px !important; /* Above sticky call bar */
-    right: 10px !important;
+  [class*="chatbot"],
+  iframe[src*="quelp"],
+  div[style*="position: fixed"][style*="bottom"] {
+    max-width: 95vw !important;
+    max-height: 50vh !important;
+    height: 50vh !important;
+    bottom: 70px !important;
+    right: 5px !important;
+    left: auto !important;
+    top: auto !important;
+    width: calc(100vw - 10px) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
   }
 
   /* Chatbot toggle button - position above sticky bar */
@@ -305,14 +313,18 @@
     pointer-events: auto !important;
   }
 
-  /* Chat window container */
+  /* Chat window and iframe container */
   [class*="chat-window"],
   [class*="chatWindow"],
   [class*="chat-container"],
-  [class*="chatContainer"] {
-    max-height: 65vh !important;
-    width: calc(100vw - 20px) !important;
-    max-width: 380px !important;
+  [class*="chatContainer"],
+  [class*="widget-container"],
+  [class*="widgetContainer"] {
+    max-height: 50vh !important;
+    height: 50vh !important;
+    width: calc(100vw - 10px) !important;
+    max-width: 100% !important;
     bottom: 70px !important;
+    top: auto !important;
   }
 }
