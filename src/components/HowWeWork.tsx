@@ -58,11 +58,11 @@ const HowWeWork = () => {
             {/* Steps */}
             <div className="space-y-4 mb-6">
               {steps.map((step) => (
-                <div key={step.number} className="flex gap-4">
+                <div key={step.number} className="flex flex-col items-center lg:flex-row lg:items-start gap-3 lg:gap-4">
                   <div className="number-badge flex-shrink-0">
                     {step.number}
                   </div>
-                  <div>
+                  <div className="text-center lg:text-left">
                     <h3 className="font-bold text-foreground mb-1 font-sans">
                       {step.title}
                     </h3>
