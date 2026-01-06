@@ -7,7 +7,6 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileCallBar from "@/components/MobileCallBar";
-import QuelpAIMobileControls from "@/components/QuelpAIMobileControls";
 
 const Index = () => {
   return (
@@ -23,7 +22,6 @@ const Index = () => {
       </main>
       <Footer />
       <MobileCallBar />
-      <QuelpAIMobileControls />
     </div>
   );
 };
