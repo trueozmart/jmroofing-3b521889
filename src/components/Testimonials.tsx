@@ -1,4 +1,6 @@
-import { Star, Quote } from "lucide-react";
+import { useState } from "react";
+import { Star, Quote, ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -123,7 +125,13 @@ const testimonials = [
   },
 ];
 
+const INITIAL_COUNT = 8;
+
 const Testimonials = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedTestimonials = showAll ? testimonials : testimonials.slice(0, INITIAL_COUNT);
+  const remainingCount = testimonials.length - INITIAL_COUNT;
+
   return (
     <section className="section-padding bg-background">
       <div className="container-custom">
@@ -137,12 +145,12 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials - Horizontal scroll on mobile */}
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
-          {testimonials.map((testimonial, index) => (
+        {/* Testimonials - Horizontal scroll on mobile, grid on desktop */}
+        <div className={`${showAll ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6' : 'flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 -mx-4 px-4 md:mx-0 md:px-0'}`}>
+          {displayedTestimonials.map((testimonial, index) => (
             <div
               key={`${testimonial.author}-${index}`}
-              className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 border border-border card-hover animate-fade-in-up flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-auto snap-center"
+              className={`bg-card rounded-xl md:rounded-2xl p-5 md:p-6 border border-border card-hover animate-fade-in-up ${!showAll ? 'flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-auto snap-center' : ''}`}
               style={{ animationDelay: `${(index % 6) * 0.1}s` }}
             >
               {/* Quote Icon */}
@@ -172,6 +180,30 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+
+        {/* View More / View Less Button */}
+        {testimonials.length > INITIAL_COUNT && (
+          <div className="text-center mt-8">
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => setShowAll(!showAll)}
+              className="gap-2"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-4 h-4" />
+                  Show Less
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-4 h-4" />
+                  View {remainingCount} More Reviews
+                </>
+              )}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
