@@ -24,7 +24,7 @@ const Hero = () => {
                 <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
               ))}
             </div>
-            <span className="font-semibold text-foreground text-sm md:text-base">5.0 (300 Reviews)</span>
+            <span className="font-semibold text-foreground text-sm md:text-base">5.0 (29 Reviews)</span>
           </div>
 
           {/* Headline */}
