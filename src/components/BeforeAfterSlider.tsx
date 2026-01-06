@@ -7,6 +7,8 @@ interface BeforeAfterSliderProps {
   afterLabel?: string;
   suburb: string;
   service: string;
+  beforePosition?: string;
+  afterPosition?: string;
 }
 
 const BeforeAfterSlider = ({
@@ -16,6 +18,8 @@ const BeforeAfterSlider = ({
   afterLabel = "After",
   suburb,
   service,
+  beforePosition = "top",
+  afterPosition = "top",
 }: BeforeAfterSliderProps) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -53,7 +57,8 @@ const BeforeAfterSlider = ({
         <img
           src={afterImage}
           alt="After"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: afterPosition }}
           loading="lazy"
         />
 
@@ -65,7 +70,8 @@ const BeforeAfterSlider = ({
           <img
             src={beforeImage}
             alt="Before"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: beforePosition }}
             loading="lazy"
           />
         </div>

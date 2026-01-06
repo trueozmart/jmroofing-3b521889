@@ -23,7 +23,7 @@ interface GalleryImage {
   service: string;
 }
 
-const beforeAfterPairs: BeforeAfterPair[] = [
+const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosition?: string })[] = [
   {
     before: before1,
     after: after1,
@@ -35,6 +35,8 @@ const beforeAfterPairs: BeforeAfterPair[] = [
     after: after2,
     suburb: "Moe",
     service: "Roof Tile Replacement",
+    beforePosition: "center 60%",
+    afterPosition: "center 45%",
   },
 ];
 
@@ -116,6 +118,8 @@ const Gallery = () => {
               afterImage={pair.after}
               suburb={pair.suburb}
               service={pair.service}
+              beforePosition={pair.beforePosition}
+              afterPosition={pair.afterPosition}
             />
           ))}
         </div>
