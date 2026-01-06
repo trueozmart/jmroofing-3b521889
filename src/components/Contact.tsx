@@ -19,7 +19,10 @@ const Contact = () => {
             {/* Contact Cards */}
             <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               {/* Phone */}
-              <a href="tel:+61421771237" className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border hover:border-accent/50 transition-colors">
+              <a
+                href="tel:+61421771237"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border hover:border-accent/50 transition-colors"
+              >
                 <div className="icon-badge-gold w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl">
                   <Phone className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
@@ -54,7 +57,7 @@ const Contact = () => {
                       ))}
                     </div>
                     <span className="font-bold text-foreground text-sm md:text-base">5.0</span>
-                    <span className="text-muted-foreground text-xs md:text-sm">(300 Reviews)</span>
+                    <span className="text-muted-foreground text-xs md:text-sm">(29 Reviews)</span>
                   </div>
                 </div>
               </div>
@@ -70,7 +73,7 @@ const Contact = () => {
           </div>
 
           {/* Right - Images & Map */}
-          <div className="space-y-4 md:space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className="space-y-4 md:space-y-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             {/* Roof Work Image */}
             <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
               <img
