@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between h-14 md:h-20 px-4 md:px-8">
         {/* Logo */}
         <a href="#" className="text-accent font-display text-lg md:text-2xl font-bold">
-          [Your Logo]
+          James Mills Roofing
         </a>
 
         {/* Right side - Phone + CTA */}
@@ -15,7 +15,7 @@ const Header = () => {
           {/* Phone number - hidden on mobile */}
           <div className="hidden md:flex flex-col items-end text-primary-foreground">
             <span className="text-xs opacity-80">Call Us Now</span>
-            <span className="font-semibold">[Your Phone]</span>
+            <span className="font-semibold">0421 771 237</span>
           </div>
 
           {/* CTA Button - Desktop */}
@@ -24,7 +24,7 @@ const Header = () => {
           </Button>
           
           {/* Mobile call button - larger touch target */}
-          <a href="tel:+61000000000" className="md:hidden">
+          <a href="tel:+61421771237" className="md:hidden">
             <Button variant="nav" size="default" className="gap-2 min-h-[44px] px-4">
               <Phone className="h-4 w-4" />
               <span className="font-semibold">Call Now</span>

@@ -18,10 +18,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="text-center md:text-left">
             <h3 className="text-accent font-display text-xl md:text-2xl font-bold mb-3 md:mb-4">
-              [Your Logo]
+              James Mills Roofing
             </h3>
             <p className="text-primary-foreground/80 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-              Sydney's trusted roofing specialists. Professional service, quality workmanship, and peace of mind guaranteed.
+              Latrobe Valley's trusted roofing specialists. Professional service, quality workmanship, and peace of mind guaranteed.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <div className="flex">
@@ -50,25 +50,27 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h4 className="font-bold text-base md:text-lg mb-4 md:mb-6 font-sans">Contact Us</h4>
             <div className="space-y-3 md:space-y-4 mb-5 md:mb-6">
-              <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3 text-primary-foreground/80 text-sm">
+              <a href="tel:+61421771237" className="flex items-center justify-center md:justify-start gap-2 md:gap-3 text-primary-foreground/80 text-sm hover:text-accent transition-colors">
                 <Phone className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent flex-shrink-0" />
-                <span>[Your Phone]</span>
-              </div>
+                <span>0421 771 237</span>
+              </a>
               <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent flex-shrink-0" />
-                <span>100 George Street, Sydney CBD, NSW</span>
+                <span>6 Sliedell Ct, Yinnar VIC 3869</span>
               </div>
             </div>
-            <Button variant="footer" size="default" className="hidden md:inline-flex">
-              Get Free Inspection
-            </Button>
+            <a href="tel:+61421771237">
+              <Button variant="footer" size="default" className="hidden md:inline-flex">
+                Get Free Inspection
+              </Button>
+            </a>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-8 md:mt-12 pt-6 md:pt-8">
           <p className="text-center text-primary-foreground/60 text-xs md:text-sm">
-            © {new Date().getFullYear()} [Your Company Name]. All rights reserved.
+            © {new Date().getFullYear()} James Mills Roof Restoration. All rights reserved.
           </p>
         </div>
       </div>
