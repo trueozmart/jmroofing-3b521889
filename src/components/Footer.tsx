@@ -29,7 +29,7 @@ const Footer = () => {
                   <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <span className="text-primary-foreground/80 text-xs md:text-sm">5.0 (300 Reviews)</span>
+              <span className="text-primary-foreground/80 text-xs md:text-sm">5.0 (29 Reviews)</span>
             </div>
           </div>
 
