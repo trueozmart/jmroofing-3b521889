@@ -29,21 +29,23 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-3 md:mb-4 animate-fade-in-up text-shadow-hero font-display" style={{ animationDelay: '0.1s' }}>
-            Sydney's Most Trusted{" "}
-            <span className="text-accent drop-shadow-lg">Roofing Specialists</span>
+            Latrobe Valley's Most Trusted{" "}
+            <span className="text-accent drop-shadow-lg">Roofing Specialist</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-base md:text-xl text-primary-foreground mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Premium roof repairs, replacements & restorations. Old-school workmanship meets modern warranty protection.
+            Premium roof repairs, replacements & restorations. Trusted workmanship with modern warranty protection.
           </p>
 
           {/* CTA Button - Large touch target for mobile */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-6 md:mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl" className="gap-3 w-full sm:w-auto min-h-[56px] text-base">
-              <Phone className="w-5 h-5" />
-              Call [Your Phone]
-            </Button>
+            <a href="tel:+61421771237">
+              <Button variant="hero" size="xl" className="gap-3 w-full sm:w-auto min-h-[56px] text-base">
+                <Phone className="w-5 h-5" />
+                Call 0421 771 237
+              </Button>
+            </a>
           </div>
 
           {/* Trust Indicators - Stack on mobile */}

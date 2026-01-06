@@ -19,13 +19,13 @@ const Contact = () => {
             {/* Contact Cards */}
             <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               {/* Phone */}
-              <a href="tel:+61000000000" className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border hover:border-accent/50 transition-colors">
+              <a href="tel:+61421771237" className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border hover:border-accent/50 transition-colors">
                 <div className="icon-badge-gold w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl">
                   <Phone className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <div className="text-left">
                   <p className="text-xs md:text-sm text-muted-foreground">Call Us Now</p>
-                  <p className="font-bold text-foreground text-base md:text-lg">[Your Phone]</p>
+                  <p className="font-bold text-foreground text-base md:text-lg">0421 771 237</p>
                 </div>
               </a>
 
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
                 <div className="text-left">
                   <p className="text-xs md:text-sm text-muted-foreground">Our Location</p>
-                  <p className="font-bold text-foreground text-sm md:text-base">100 George Street, Sydney CBD, NSW</p>
+                  <p className="font-bold text-foreground text-sm md:text-base">6 Sliedell Ct, Yinnar VIC 3869</p>
                 </div>
               </div>
 
@@ -61,10 +61,12 @@ const Contact = () => {
             </div>
 
             {/* CTA Button - Hidden on mobile (we have sticky) */}
-            <Button variant="gold" size="lg" className="gap-3 hidden md:inline-flex">
-              <Phone className="w-5 h-5" />
-              Call [Your Phone] Now
-            </Button>
+            <a href="tel:+61421771237">
+              <Button variant="gold" size="lg" className="gap-3 hidden md:inline-flex">
+                <Phone className="w-5 h-5" />
+                Call 0421 771 237 Now
+              </Button>
+            </a>
           </div>
 
           {/* Right - Images & Map */}
@@ -78,10 +80,10 @@ const Contact = () => {
               />
             </div>
 
-            {/* Map */}
+            {/* Map - Updated for Yinnar VIC */}
             <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-lg border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8374081999044!2d151.2069902!3d-33.8688197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae401e8b983f%3A0x5017d681632ccc0!2sGeorge%20St%2C%20Sydney%20NSW!5e0!3m2!1sen!2sau!4v1703000000000!5m2!1sen!2sau"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3138.8962668442574!2d146.31716!3d-38.3177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b29ccf2ff5c9e3d%3A0xf04567605329f90!2s6%20Sliedell%20Ct%2C%20Yinnar%20VIC%203869!5e0!3m2!1sen!2sau!4v1703000000000!5m2!1sen!2sau"
                 width="100%"
                 height="160"
                 style={{ border: 0 }}
