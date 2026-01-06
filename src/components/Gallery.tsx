@@ -7,8 +7,11 @@ import before1 from "@/assets/gallery/before-1.webp";
 import after1 from "@/assets/gallery/after-1.webp";
 import before2 from "@/assets/gallery/before-2.webp";
 import after2 from "@/assets/gallery/after-2.webp";
-import pressureCleaning from "@/assets/gallery/pressure-cleaning.webp";
-import metalRoofSolar from "@/assets/gallery/metal-roof-solar.webp";
+import project1 from "@/assets/gallery/project-1.webp";
+import project2 from "@/assets/gallery/project-2.webp";
+import project3 from "@/assets/gallery/project-3.webp";
+import project4 from "@/assets/gallery/project-4.webp";
+import project5 from "@/assets/gallery/project-5.webp";
 
 interface BeforeAfterPair {
   before: string;
@@ -42,24 +45,29 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
 
 const galleryImages: GalleryImage[] = [
   {
-    src: pressureCleaning,
-    suburb: "Traralgon",
-    service: "Pressure Cleaning & Moss Removal",
-  },
-  {
-    src: metalRoofSolar,
-    suburb: "Newborough",
-    service: "Metal Roofing & Gutters",
-  },
-  {
-    src: after1,
+    src: project1,
     suburb: "Yinnar",
-    service: "Roof Restoration Complete",
+    service: "Colorbond Re-roofing",
   },
   {
-    src: after2,
-    suburb: "Moe",
+    src: project2,
+    suburb: "Morwell",
     service: "Tile Roof Restoration",
+  },
+  {
+    src: project3,
+    suburb: "Traralgon",
+    service: "Metal Roofing & Solar",
+  },
+  {
+    src: project4,
+    suburb: "Churchill",
+    service: "New Tile Installation",
+  },
+  {
+    src: project5,
+    suburb: "Moe",
+    service: "Colorbond Roofing & Gutters",
   },
 ];
 
