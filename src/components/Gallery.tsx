@@ -8,8 +8,6 @@ import after1 from "@/assets/gallery/after-1.webp";
 import before2 from "@/assets/gallery/before-2.webp";
 import after2 from "@/assets/gallery/after-2.webp";
 import pressureCleaning from "@/assets/gallery/pressure-cleaning.webp";
-import colorbondRoof from "@/assets/gallery/colorbond-roof.webp";
-import brickHouseRoof from "@/assets/gallery/brick-house-roof.webp";
 import metalRoofSolar from "@/assets/gallery/metal-roof-solar.webp";
 
 interface BeforeAfterPair {
@@ -45,16 +43,6 @@ const galleryImages: GalleryImage[] = [
     src: pressureCleaning,
     suburb: "Traralgon",
     service: "Pressure Cleaning & Moss Removal",
-  },
-  {
-    src: colorbondRoof,
-    suburb: "Morwell",
-    service: "Colorbond Re-roofing",
-  },
-  {
-    src: brickHouseRoof,
-    suburb: "Churchill",
-    service: "Complete Roof Restoration",
   },
   {
     src: metalRoofSolar,
@@ -132,48 +120,73 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* Gallery Grid Header */}
-        <div className="text-center mb-8">
+        {/* Gallery Carousel Header */}
+        <div className="text-center mb-6">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
             More Completed Projects
           </h3>
           <p className="text-muted-foreground">
-            Click any image to view in full size
+            Swipe or use arrows to browse
           </p>
         </div>
 
-        {/* Masonry-style Gallery Grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="relative mb-4 md:mb-6 break-inside-avoid group cursor-pointer"
-              onClick={() => openLightbox(index)}
-            >
-              <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-md border border-border transition-all duration-300 group-hover:shadow-xl group-hover:border-primary/30">
-                <img
-                  src={image.src}
-                  alt={`${image.suburb} - ${image.service}`}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                
-                {/* Hover Overlay with Caption */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 md:p-5 w-full">
-                    <p className="text-white font-bold text-lg">{image.suburb}</p>
-                    <p className="text-white/90 text-sm">{image.service}</p>
-                  </div>
-                </div>
-
-                {/* Always visible caption on mobile */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 md:hidden">
-                  <p className="text-white font-semibold text-sm">{image.suburb}</p>
-                  <p className="text-white/80 text-xs">{image.service}</p>
-                </div>
-              </div>
+        {/* Single Image Carousel */}
+        <div className="relative max-w-2xl mx-auto">
+          {/* Main Image */}
+          <div 
+            className="relative aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl shadow-lg border border-border cursor-pointer"
+            onClick={() => openLightbox(currentImageIndex)}
+          >
+            <img
+              src={galleryImages[currentImageIndex].src}
+              alt={`${galleryImages[currentImageIndex].suburb} - ${galleryImages[currentImageIndex].service}`}
+              className="w-full h-full object-cover transition-opacity duration-300"
+              loading="lazy"
+            />
+            
+            {/* Caption Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:p-5">
+              <p className="text-white font-bold text-lg">{galleryImages[currentImageIndex].suburb}</p>
+              <p className="text-white/90 text-sm">{galleryImages[currentImageIndex].service}</p>
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevImage}
+            className="absolute left-2 md:-left-14 top-1/2 -translate-y-1/2 z-10 p-3 bg-white shadow-lg hover:bg-muted rounded-full transition-colors border border-border"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-5 h-5 text-foreground" />
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-2 md:-right-14 top-1/2 -translate-y-1/2 z-10 p-3 bg-white shadow-lg hover:bg-muted rounded-full transition-colors border border-border"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-5 h-5 text-foreground" />
+          </button>
+
+          {/* Dot Indicators */}
+          <div className="flex justify-center gap-2 mt-4">
+            {galleryImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  index === currentImageIndex 
+                    ? "bg-primary w-6" 
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Image Counter */}
+          <p className="text-center text-sm text-muted-foreground mt-2">
+            {currentImageIndex + 1} of {galleryImages.length}
+          </p>
         </div>
 
         {/* Lightbox */}
