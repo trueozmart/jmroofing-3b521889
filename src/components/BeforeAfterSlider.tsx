@@ -53,7 +53,7 @@ const BeforeAfterSlider = ({
         <img
           src={afterImage}
           alt="After"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top"
           loading="lazy"
         />
 
@@ -65,7 +65,7 @@ const BeforeAfterSlider = ({
           <img
             src={beforeImage}
             alt="Before"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top"
             loading="lazy"
           />
         </div>
