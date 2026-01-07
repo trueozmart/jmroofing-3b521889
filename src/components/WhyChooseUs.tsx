@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
             Why Latrobe Valley Homeowners Choose Us
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            From Morwell to Traralgon, we're the roofing team Latrobe Valley trusts for quality, reliability, and honest service.
+            From Morwell to Traralgon, homeowners turn to us for roofing work backed by decades of hands-on experience and a fully trade-qualified team.
           </p>
         </div>
 
