@@ -24,6 +24,8 @@ import project12 from "@/assets/gallery/project-12.jpg";
 import project13 from "@/assets/gallery/project-13.jpg";
 import project14 from "@/assets/gallery/project-14.jpg";
 import project15 from "@/assets/gallery/project-15.jpg";
+import project16 from "@/assets/gallery/project-16.jpg";
+import project17 from "@/assets/gallery/project-17.jpg";
 
 // Track preloaded images to avoid duplicate requests
 const preloadedImages = new Set<string>();
@@ -152,6 +154,16 @@ const galleryImages: GalleryImage[] = [
     src: project15,
     suburb: "Yinnar",
     service: "Roof Cleaning",
+  },
+  {
+    src: project16,
+    suburb: "Churchill",
+    service: "Tile & Metal Roofing",
+  },
+  {
+    src: project17,
+    suburb: "Traralgon",
+    service: "Tile Roof Installation",
   },
 ];
 
