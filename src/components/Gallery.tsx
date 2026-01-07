@@ -79,6 +79,26 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
 
 const galleryImages: GalleryImage[] = [
   {
+    src: project6,
+    suburb: "Traralgon",
+    service: "Tile Roof Restoration",
+  },
+  {
+    src: project7,
+    suburb: "Churchill",
+    service: "Tile Roof Painting",
+  },
+  {
+    src: project8,
+    suburb: "Moe",
+    service: "Colorbond Roofing",
+  },
+  {
+    src: project9,
+    suburb: "Morwell",
+    service: "Colorbond Re-roofing",
+  },
+  {
     src: project4,
     suburb: "Churchill",
     service: "New Tile Installation",
@@ -102,26 +122,6 @@ const galleryImages: GalleryImage[] = [
     src: project1,
     suburb: "Yinnar",
     service: "Tile Replacement",
-  },
-  {
-    src: project6,
-    suburb: "Traralgon",
-    service: "Tile Roof Restoration",
-  },
-  {
-    src: project7,
-    suburb: "Churchill",
-    service: "Tile Roof Painting",
-  },
-  {
-    src: project8,
-    suburb: "Moe",
-    service: "Colorbond Roofing",
-  },
-  {
-    src: project9,
-    suburb: "Morwell",
-    service: "Colorbond Re-roofing",
   },
   {
     src: project10,
