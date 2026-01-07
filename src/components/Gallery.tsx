@@ -83,7 +83,7 @@ const galleryImages: GalleryImage[] = [
   {
     src: project1,
     suburb: "Yinnar",
-    service: "Colorbond Re-roofing",
+    service: "Tile Replacement",
   },
 ];
 
