@@ -5,8 +5,8 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 // Import images
 import before1 from "@/assets/gallery/before-1.webp";
 import after1 from "@/assets/gallery/after-1.webp";
-import before2 from "@/assets/gallery/before-2.webp";
-import after2 from "@/assets/gallery/after-2.webp";
+import before2 from "@/assets/gallery/before-2.jpg";
+import after2 from "@/assets/gallery/after-2.jpg";
 import project1 from "@/assets/gallery/project-1.webp";
 import project2 from "@/assets/gallery/project-2.webp";
 import project3 from "@/assets/gallery/project-3.webp";
