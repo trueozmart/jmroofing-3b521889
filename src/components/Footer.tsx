@@ -21,7 +21,7 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="J.I.M Roofing & Restoration" 
-              className="h-16 md:h-20 w-auto brightness-0 invert mx-auto md:mx-0 mb-3 md:mb-4"
+              className="h-16 md:h-20 w-auto mx-auto md:mx-0 mb-3 md:mb-4"
             />
             <p className="text-primary-foreground/80 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
               Latrobe Valley's trusted roofing specialists. Professional service, quality workmanship, and peace of mind guaranteed.

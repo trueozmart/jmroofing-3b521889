@@ -11,7 +11,7 @@ const Header = () => {
           <img 
             src={logo} 
             alt="J.I.M Roofing & Restoration" 
-            className="h-10 md:h-14 w-auto brightness-0 invert"
+            className="h-10 md:h-14 w-auto"
           />
         </a>
 
