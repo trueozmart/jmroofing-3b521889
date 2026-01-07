@@ -126,6 +126,62 @@ const testimonials = [
 ];
 
 const INITIAL_COUNT = 8;
+const TEXT_CLAMP_THRESHOLD = 200; // Characters threshold for showing expand button
+
+const TestimonialCard = ({ testimonial, index, isGrid }: { testimonial: typeof testimonials[0]; index: number; isGrid: boolean }) => {
+  const [expanded, setExpanded] = useState(false);
+  const isLongText = testimonial.text.length > TEXT_CLAMP_THRESHOLD;
+
+  return (
+    <div
+      className={`bg-card rounded-xl md:rounded-2xl p-5 md:p-6 border border-border card-hover animate-fade-in-up ${!isGrid ? 'flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-auto snap-center' : ''}`}
+      style={{ animationDelay: `${(index % 6) * 0.1}s` }}
+    >
+      {/* Quote Icon */}
+      <Quote className="w-6 h-6 md:w-8 md:h-8 text-accent/30 mb-3 md:mb-4" />
+      
+      {/* Stars */}
+      <div className="flex mb-3 md:mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
+        ))}
+      </div>
+
+      {/* Testimonial Text */}
+      <div className="mb-4 md:mb-6">
+        <p className={`text-foreground leading-relaxed text-sm ${!expanded && isLongText ? 'line-clamp-4' : ''}`}>
+          "{testimonial.text}"
+        </p>
+        {isLongText && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="text-primary hover:text-primary/80 text-sm font-medium mt-2 flex items-center gap-1 transition-colors"
+          >
+            {expanded ? (
+              <>
+                Show less <ChevronUp className="w-3 h-3" />
+              </>
+            ) : (
+              <>
+                Read more <ChevronDown className="w-3 h-3" />
+              </>
+            )}
+          </button>
+        )}
+      </div>
+
+      {/* Author */}
+      <div className="border-t border-border pt-3 md:pt-4">
+        <p className="font-semibold text-foreground text-sm md:text-base">
+          {testimonial.author}
+        </p>
+        <p className="text-xs md:text-sm text-muted-foreground">
+          {testimonial.location}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const Testimonials = () => {
   const [showAll, setShowAll] = useState(false);
@@ -148,36 +204,12 @@ const Testimonials = () => {
         {/* Testimonials - Horizontal scroll on mobile, grid on desktop */}
         <div className={`${showAll ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6' : 'flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 -mx-4 px-4 md:mx-0 md:px-0'}`}>
           {displayedTestimonials.map((testimonial, index) => (
-            <div
+            <TestimonialCard
               key={`${testimonial.author}-${index}`}
-              className={`bg-card rounded-xl md:rounded-2xl p-5 md:p-6 border border-border card-hover animate-fade-in-up ${!showAll ? 'flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-auto snap-center' : ''}`}
-              style={{ animationDelay: `${(index % 6) * 0.1}s` }}
-            >
-              {/* Quote Icon */}
-              <Quote className="w-6 h-6 md:w-8 md:h-8 text-accent/30 mb-3 md:mb-4" />
-              
-              {/* Stars */}
-              <div className="flex mb-3 md:mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
-                ))}
-              </div>
-
-              {/* Testimonial Text */}
-              <p className="text-foreground leading-relaxed mb-4 md:mb-6 text-sm line-clamp-4 md:line-clamp-none">
-                "{testimonial.text}"
-              </p>
-
-              {/* Author */}
-              <div className="border-t border-border pt-3 md:pt-4">
-                <p className="font-semibold text-foreground text-sm md:text-base">
-                  {testimonial.author}
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  {testimonial.location}
-                </p>
-              </div>
-            </div>
+              testimonial={testimonial}
+              index={index}
+              isGrid={showAll}
+            />
           ))}
         </div>
 
