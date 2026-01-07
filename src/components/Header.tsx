@@ -1,13 +1,18 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
       <div className="container-custom flex items-center justify-between h-14 md:h-20 px-4 md:px-8">
         {/* Logo */}
-        <a href="#" className="text-accent font-display text-lg md:text-2xl font-bold">
-          James Mills Roofing
+        <a href="#" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="J.I.M Roofing & Restoration" 
+            className="h-10 md:h-14 w-auto brightness-0 invert"
+          />
         </a>
 
         {/* Right side - Phone + CTA */}
