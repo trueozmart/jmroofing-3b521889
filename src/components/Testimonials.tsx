@@ -99,7 +99,7 @@ const testimonials = [
     location: "Blackwarry VIC",
   },
   {
-    text: "James Mills was prompt, courteous, and totally professional. He kept in touch from first inspection and quote and always arrived to undertake the next phase of work when he said he would. He repaired our tile roof at several required sites - every section of ridge-capping on the roof has been removed, cleaned, re-bedded and re-pointed, and the entire roof has been pressure washed and protectively spray coated. I have no hesitation in recommending James as a highly professional roofing tradesman. It is refreshing to find someone like James who is prompt, courteous and totally professional in approach to his business dealings.",
+    text: "James Mills was prompt, courteous, and totally professional. He kept in touch from first inspection and quote and always arrived to undertake the next phase of work when he said he would. He repaired our tile roof at several required sites. Every section of ridge-capping on the roof has been removed, cleaned, re-bedded and re-pointed, and the entire roof has been pressure washed and protectively spray coated. I have no hesitation in recommending James as a highly professional roofing tradesman. It is refreshing to find someone like James who is prompt, courteous and totally professional in approach to his business dealings.",
     author: "John S",
     location: "Warragul VIC",
   },
