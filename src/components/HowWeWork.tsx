@@ -76,10 +76,12 @@ const HowWeWork = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="gold" size="lg" className="gap-3 w-full sm:w-auto min-h-[52px]">
-              <Phone className="w-5 h-5" />
-              Call 0421 771 237
-            </Button>
+            <a href="tel:+61421771237" className="block w-full sm:w-auto">
+              <Button variant="gold" size="lg" className="gap-3 w-full min-h-[52px]">
+                <Phone className="w-5 h-5" />
+                Call 0421 771 237
+              </Button>
+            </a>
           </div>
         </div>
       </div>
