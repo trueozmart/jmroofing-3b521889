@@ -1,13 +1,19 @@
 import { Phone, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roofer.jpg";
+import heroImageMobile from "@/assets/hero-roofer-mobile.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[100svh] flex items-center pt-16 md:pt-20">
-      {/* Background Image */}
+      {/* Background Image - Mobile */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{ backgroundImage: `url(${heroImageMobile})` }}
+      />
+      {/* Background Image - Desktop */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
