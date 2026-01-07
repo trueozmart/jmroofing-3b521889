@@ -7,19 +7,19 @@ const Hero = () => {
   return (
     <section className="relative min-h-[100svh] flex items-center pt-16 md:pt-20">
       {/* Background Image - Mobile */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{ backgroundImage: `url(${heroImageMobile})` }}
       />
       {/* Background Image - Desktop */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-hero-overlay" />
-      
+
       {/* Content */}
       <div className="relative z-10 container-custom px-5 md:px-8 py-8 md:py-24">
         <div className="max-w-2xl text-center mx-auto lg:text-left lg:mx-0">
@@ -34,21 +34,32 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-2 md:mb-3 animate-fade-in-up text-shadow-hero font-display" style={{ animationDelay: '0.1s' }}>
-            James Mills{" "}
-            <span className="text-accent drop-shadow-lg">Roof Restoration</span>
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-2 md:mb-3 animate-fade-in-up text-shadow-hero font-display"
+            style={{ animationDelay: "0.1s" }}
+          >
+            James Mills <span className="text-accent drop-shadow-lg">Roof Restoration</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-2xl text-primary-foreground font-semibold mb-2 md:mb-3 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle leading-relaxed" style={{ animationDelay: '0.15s' }}>
+          <p
+            className="text-lg md:text-2xl text-primary-foreground font-semibold mb-2 md:mb-3 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle leading-relaxed"
+            style={{ animationDelay: "0.15s" }}
+          >
             Qualified Roof Tiler With Over 25 Years Experience
           </p>
-          <p className="text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Our Team Are All Trade Qualified Roof Tilers & Service All Of The Latrobe Valley.
+          <p
+            className="text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Our Team Are All Trade-Qualified Roof Tilers, & We Service All Of The Latrobe Valley.
           </p>
 
           {/* CTA Button - Large touch target for mobile */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-6 md:mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-6 md:mb-8 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <a href="tel:+61421771237">
               <Button variant="hero" size="xl" className="gap-3 w-full sm:w-auto min-h-[56px] text-base">
                 <Phone className="w-5 h-5" />
@@ -58,7 +69,10 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators - Stack on mobile */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2 text-primary-foreground text-xs md:text-sm animate-fade-in-up text-shadow-subtle font-medium" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2 text-primary-foreground text-xs md:text-sm animate-fade-in-up text-shadow-subtle font-medium"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div className="flex items-center gap-1.5">
               <Shield className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent drop-shadow-md" />
               <span>No obligation</span>
