@@ -83,20 +83,6 @@ const Contact = () => {
               />
             </div>
 
-            {/* Map - Updated for Yinnar VIC */}
-            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-lg border border-border">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3138.8962668442574!2d146.31716!3d-38.3177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b29ccf2ff5c9e3d%3A0xf04567605329f90!2s6%20Sliedell%20Ct%2C%20Yinnar%20VIC%203869!5e0!3m2!1sen!2sau!4v1703000000000!5m2!1sen!2sau"
-                width="100%"
-                height="160"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location Map"
-                className="grayscale hover:grayscale-0 transition-all duration-500 md:h-[200px]"
-              />
-            </div>
           </div>
         </div>
       </div>
