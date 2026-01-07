@@ -23,8 +23,7 @@ const Services = () => {
             Our Roofing Services
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            From inspections to full restorations, we offer a complete range of professional roofing services for all of
-            the Latrobe Valley.
+            Specialising in re-roofing and full restorations, we offer a complete range of professional roofing services for all of the Latrobe Valley.
           </p>
         </div>
 
