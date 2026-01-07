@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 border border-border card-hover animate-fade-in-up"
+              className="bg-card rounded-xl md:rounded-2xl p-5 md:p-8 border border-border animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`${feature.colorClass} mb-4 md:mb-6 w-12 h-12 md:w-14 md:h-14`}>
