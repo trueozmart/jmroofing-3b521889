@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
@@ -13,12 +13,20 @@ import project3 from "@/assets/gallery/project-3.webp";
 import project4 from "@/assets/gallery/project-4.webp";
 import project5 from "@/assets/gallery/project-5.webp";
 
-// Preload all gallery images for faster carousel navigation
+// Track preloaded images to avoid duplicate requests
+const preloadedImages = new Set<string>();
+
+// Preload a single image
+const preloadImage = (src: string) => {
+  if (preloadedImages.has(src)) return;
+  preloadedImages.add(src);
+  const img = new Image();
+  img.src = src;
+};
+
+// Preload multiple images
 const preloadImages = (images: string[]) => {
-  images.forEach((src) => {
-    const img = new Image();
-    img.src = src;
-  });
+  images.forEach(preloadImage);
 };
 
 interface BeforeAfterPair {
@@ -82,11 +90,39 @@ const galleryImages: GalleryImage[] = [
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
-  // Preload all gallery images on mount for faster navigation
+  // Preload all gallery images when section comes into view
   useEffect(() => {
-    preloadImages(galleryImages.map((img) => img.src));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // Preload all gallery images
+          preloadImages(galleryImages.map((img) => img.src));
+          // Preload before/after images
+          preloadImages(beforeAfterPairs.flatMap((pair) => [pair.before, pair.after]));
+          setImagesLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" } // Start preloading 200px before section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
+
+  // Preload adjacent images when current image changes for instant navigation
+  useEffect(() => {
+    const nextIndex = (currentImageIndex + 1) % galleryImages.length;
+    const prevIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    preloadImage(galleryImages[nextIndex].src);
+    preloadImage(galleryImages[prevIndex].src);
+  }, [currentImageIndex]);
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
@@ -114,7 +150,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="section-padding bg-muted/30">
+    <section id="gallery" className="section-padding bg-muted/30" ref={sectionRef}>
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-14">
@@ -166,7 +202,8 @@ const Gallery = () => {
               src={galleryImages[currentImageIndex].src}
               alt={`${galleryImages[currentImageIndex].suburb} - ${galleryImages[currentImageIndex].service}`}
               className="w-full h-full object-cover transition-opacity duration-300"
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
             />
             
             {/* Caption Overlay */}
