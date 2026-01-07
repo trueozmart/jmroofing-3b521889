@@ -11,17 +11,20 @@ const steps = [
   {
     number: 2,
     title: "Clear Explanation of Issues & Options",
-    description: "We'll show you exactly what's going on and explain your options in plain English—no jargon, no upselling.",
+    description:
+      "We'll show you exactly what's going on and explain your options in plain English—no jargon, no upselling.",
   },
   {
     number: 3,
     title: "Fast, Professional Workmanship",
-    description: "Our experienced crews work efficiently and respectfully, treating your home with care every step of the way.",
+    description:
+      "Our experienced crews work efficiently and respectfully, treating your home with care every step of the way.",
   },
   {
     number: 4,
     title: "Thorough Clean-Up & Final Walkthrough",
-    description: "We leave your property spotless and walk you through the completed work. Your confidence is our priority.",
+    description:
+      "We leave your property spotless and walk you through the completed work. Your confidence is our priority.",
   },
 ];
 
@@ -47,7 +50,7 @@ const HowWeWork = () => {
           </div>
 
           {/* Content */}
-          <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: '0.1s' }}>
+          <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: "0.1s" }}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
               How We Work
             </h2>
@@ -63,9 +66,7 @@ const HowWeWork = () => {
                     <div className="number-badge flex-shrink-0 w-8 h-8 md:w-10 md:h-10 text-xs md:text-sm">
                       {step.number}
                     </div>
-                    <h3 className="font-bold text-foreground font-sans text-sm md:text-base">
-                      {step.title}
-                    </h3>
+                    <h3 className="font-bold text-foreground font-sans text-sm md:text-base">{step.title}</h3>
                   </div>
                   <p className="text-muted-foreground text-xs md:text-sm leading-relaxed pl-10 md:pl-12">
                     {step.description}
@@ -77,7 +78,7 @@ const HowWeWork = () => {
             {/* CTA */}
             <Button variant="gold" size="lg" className="gap-3 w-full sm:w-auto min-h-[52px]">
               <Phone className="w-5 h-5" />
-              Call [Your Phone]
+              Call 0421 771 237
             </Button>
           </div>
         </div>
