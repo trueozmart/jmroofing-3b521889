@@ -1,14 +1,13 @@
 import { Phone, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import roofRepairImage from "@/assets/roof-repair.jpg";
 
 const Contact = () => {
   return (
     <section className="section-padding bg-background pb-24 md:pb-16">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Content */}
-          <div className="animate-fade-in-up text-center lg:text-left">
+        <div className="max-w-2xl mx-auto">
+          {/* Content */}
+          <div className="animate-fade-in-up text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
               Ready to Get Your Roof Sorted?
             </h2>
@@ -33,7 +32,7 @@ const Contact = () => {
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border">
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border justify-center md:justify-start">
                 <div className="icon-badge-gold w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
@@ -70,19 +69,6 @@ const Contact = () => {
                 Call 0421 771 237 Now
               </Button>
             </a>
-          </div>
-
-          {/* Right - Images & Map */}
-          <div className="space-y-4 md:space-y-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            {/* Roof Work Image */}
-            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={roofRepairImage}
-                alt="Professional roof repair work"
-                className="w-full h-48 md:h-64 object-cover"
-              />
-            </div>
-
           </div>
         </div>
       </div>
