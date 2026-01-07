@@ -1,6 +1,5 @@
-import { Phone, Star } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import rooferWorkImage from "@/assets/roofer-work.jpg";
 
 const steps = [
   {
@@ -32,23 +31,7 @@ const HowWeWork = () => {
   return (
     <section className="section-padding bg-section-alt">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Image - Hidden on small mobile, visible md+ */}
-          <div className="relative animate-fade-in-up hidden md:block">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={rooferWorkImage}
-                alt="Professional roofer working on slate tiles"
-                className="w-full h-auto object-cover"
-              />
-              {/* Rating Badge */}
-              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 font-semibold shadow-lg text-sm md:text-base">
-                <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
-                5.0 Rating
-              </div>
-            </div>
-          </div>
-
+        <div className="max-w-3xl mx-auto">
           {/* Content */}
           <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: "0.1s" }}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
