@@ -59,7 +59,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent flex-shrink-0" />
-                <span>6 Sliedell Ct, Yinnar VIC 3869</span>
+                <span>2 Jumbuck Road, Yinnar VIC 3869</span>
               </div>
             </div>
             <a href="tel:+61421771237">

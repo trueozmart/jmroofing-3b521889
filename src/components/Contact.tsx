@@ -39,7 +39,7 @@ const Contact = () => {
                 </div>
                 <div className="text-left">
                   <p className="text-xs md:text-sm text-muted-foreground">Our Location</p>
-                  <p className="font-bold text-foreground text-sm md:text-base">6 Sliedell Ct, Yinnar VIC 3869</p>
+                  <p className="font-bold text-foreground text-sm md:text-base">2 Jumbuck Road, Yinnar VIC 3869</p>
                 </div>
               </div>
 
