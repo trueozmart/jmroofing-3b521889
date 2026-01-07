@@ -7,6 +7,8 @@ import before1 from "@/assets/gallery/before-1.webp";
 import after1 from "@/assets/gallery/after-1.webp";
 import before2 from "@/assets/gallery/before-2.jpg";
 import after2 from "@/assets/gallery/after-2.jpg";
+import before3 from "@/assets/gallery/before-3.jpg";
+import after3 from "@/assets/gallery/after-3.jpg";
 import project1 from "@/assets/gallery/project-1.webp";
 import project2 from "@/assets/gallery/project-2.webp";
 import project3 from "@/assets/gallery/project-3.webp";
@@ -56,6 +58,12 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
     service: "Full Roof Restoration",
     beforePosition: "center 60%",
     afterPosition: "center 45%",
+  },
+  {
+    before: before3,
+    after: after3,
+    suburb: "Morwell",
+    service: "Colorbond Re-roofing",
   },
 ];
 
