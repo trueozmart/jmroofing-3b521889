@@ -14,6 +14,16 @@ import project2 from "@/assets/gallery/project-2.webp";
 import project3 from "@/assets/gallery/project-3.webp";
 import project4 from "@/assets/gallery/project-4.webp";
 import project5 from "@/assets/gallery/project-5.webp";
+import project6 from "@/assets/gallery/project-6.jpg";
+import project7 from "@/assets/gallery/project-7.jpg";
+import project8 from "@/assets/gallery/project-8.jpg";
+import project9 from "@/assets/gallery/project-9.jpg";
+import project10 from "@/assets/gallery/project-10.jpg";
+import project11 from "@/assets/gallery/project-11.jpg";
+import project12 from "@/assets/gallery/project-12.jpg";
+import project13 from "@/assets/gallery/project-13.jpg";
+import project14 from "@/assets/gallery/project-14.jpg";
+import project15 from "@/assets/gallery/project-15.jpg";
 
 // Track preloaded images to avoid duplicate requests
 const preloadedImages = new Set<string>();
@@ -92,6 +102,56 @@ const galleryImages: GalleryImage[] = [
     src: project1,
     suburb: "Yinnar",
     service: "Tile Replacement",
+  },
+  {
+    src: project6,
+    suburb: "Traralgon",
+    service: "Tile Roof Restoration",
+  },
+  {
+    src: project7,
+    suburb: "Churchill",
+    service: "Tile Roof Painting",
+  },
+  {
+    src: project8,
+    suburb: "Moe",
+    service: "Colorbond Roofing",
+  },
+  {
+    src: project9,
+    suburb: "Morwell",
+    service: "Colorbond Re-roofing",
+  },
+  {
+    src: project10,
+    suburb: "Yinnar",
+    service: "Roof Restoration",
+  },
+  {
+    src: project11,
+    suburb: "Churchill",
+    service: "Tile Roof Painting",
+  },
+  {
+    src: project12,
+    suburb: "Traralgon",
+    service: "Tile Roof Restoration",
+  },
+  {
+    src: project13,
+    suburb: "Moe",
+    service: "Gutter Guard Installation",
+  },
+  {
+    src: project14,
+    suburb: "Morwell",
+    service: "Gutter Guard Installation",
+  },
+  {
+    src: project15,
+    suburb: "Yinnar",
+    service: "Roof Cleaning",
   },
 ];
 
