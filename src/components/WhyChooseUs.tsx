@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
             Why Latrobe Valley Homeowners Choose Us
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            Servicing all of the Latrobe Valley, homeowners turn to us for roofing work backed by decades of hands-on experience and a fully trade-qualified team.
+            From inspections to full restorations, we offer a complete range of professional roofing services for all of the Latrobe Valley.
           </p>
         </div>
 
