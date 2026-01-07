@@ -44,7 +44,7 @@ const Hero = () => {
             Qualified Roof Tiler With Over 25 Years Experience
           </p>
           <p className="text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Our Team Are All Trade Qualified Roof Tilers
+            Our Team Are All Trade Qualified Roof Tilers & Service All Of The Latrobe Valley.
           </p>
 
           {/* CTA Button - Large touch target for mobile */}
