@@ -34,14 +34,17 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-3 md:mb-4 animate-fade-in-up text-shadow-hero font-display" style={{ animationDelay: '0.1s' }}>
-            Latrobe Valley's Most Trusted{" "}
-            <span className="text-accent drop-shadow-lg">Roofing Specialist</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-2 md:mb-3 animate-fade-in-up text-shadow-hero font-display" style={{ animationDelay: '0.1s' }}>
+            James Mills{" "}
+            <span className="text-accent drop-shadow-lg">Roof Restoration</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-xl text-primary-foreground mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Premium roof repairs, replacements & restorations. Trusted workmanship with modern warranty protection.
+          <p className="text-lg md:text-2xl text-primary-foreground font-semibold mb-2 md:mb-3 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle leading-relaxed" style={{ animationDelay: '0.15s' }}>
+            Qualified Roof Tiler With Over 25 Years Experience
+          </p>
+          <p className="text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            Our Team Are All Trade Qualified Roof Tilers
           </p>
 
           {/* CTA Button - Large touch target for mobile */}
