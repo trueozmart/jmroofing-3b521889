@@ -4,7 +4,7 @@ const features = [
   {
     icon: CheckCircle2,
     title: "Experienced Local Specialists",
-    description: "We understand Sydney's unique weather conditions—from coastal salt spray to western heat. Our team has the expertise to handle it all.",
+    description: "We understand Latrobe Valley's unique weather conditions—from harsh winters to summer heat. Our team has the expertise to handle it all.",
     colorClass: "icon-badge-blue",
   },
   {
@@ -28,10 +28,10 @@ const WhyChooseUs = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
-            Why Sydney Homeowners Choose Us
+            Why Latrobe Valley Homeowners Choose Us
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            From Cronulla to Parramatta, we're the roofing team Sydney trusts for quality, reliability, and honest service.
+            From Morwell to Traralgon, we're the roofing team Latrobe Valley trusts for quality, reliability, and honest service.
           </p>
         </div>
 

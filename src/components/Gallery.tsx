@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
@@ -12,6 +12,14 @@ import project2 from "@/assets/gallery/project-2.webp";
 import project3 from "@/assets/gallery/project-3.webp";
 import project4 from "@/assets/gallery/project-4.webp";
 import project5 from "@/assets/gallery/project-5.webp";
+
+// Preload all gallery images for faster carousel navigation
+const preloadImages = (images: string[]) => {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
 
 interface BeforeAfterPair {
   before: string;
@@ -74,6 +82,11 @@ const galleryImages: GalleryImage[] = [
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Preload all gallery images on mount for faster navigation
+  useEffect(() => {
+    preloadImages(galleryImages.map((img) => img.src));
+  }, []);
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);

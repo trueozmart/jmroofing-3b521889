@@ -30,7 +30,7 @@ const Services = () => {
             Our Roofing Services
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            From inspections to full restorations, we offer a complete range of professional roofing services for Sydney homes.
+            From inspections to full restorations, we offer a complete range of professional roofing services for Latrobe Valley homes.
           </p>
         </div>
 
