@@ -32,7 +32,7 @@ const Contact = () => {
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border justify-center md:justify-start">
+              <div className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-xl border border-border">
                 <div className="icon-badge-gold w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
