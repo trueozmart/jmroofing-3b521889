@@ -1,6 +1,6 @@
 import { Phone, MapPin, Star, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-footer.png";
 
 const services = [
   "Roof Repairs",
