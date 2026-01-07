@@ -12,7 +12,7 @@ const steps = [
     number: 2,
     title: "Clear Explanation of Issues & Options",
     description:
-      "We'll show you exactly what's going on and explain your options in plain English—no jargon, no upselling.",
+      "We'll show you exactly what's going on and explain your options in plain English. No jargon, no upselling.",
   },
   {
     number: 3,

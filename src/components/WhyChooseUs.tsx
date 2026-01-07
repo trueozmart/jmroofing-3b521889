@@ -4,7 +4,7 @@ const features = [
   {
     icon: CheckCircle2,
     title: "Experienced Local Specialists",
-    description: "We understand Latrobe Valley's unique weather conditions—from harsh winters to summer heat. Our team has the expertise to handle it all.",
+    description: "We understand Latrobe Valley's unique weather conditions, from harsh winters to summer heat. Our team has the expertise to handle it all.",
     colorClass: "icon-badge-blue",
   },
   {
