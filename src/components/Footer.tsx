@@ -1,5 +1,6 @@
 import { Phone, MapPin, Star, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const services = [
   "Roof Repairs",
@@ -17,9 +18,11 @@ const Footer = () => {
         <div className="grid gap-8 md:gap-12 lg:gap-16 md:grid-cols-3">
           {/* Company Info */}
           <div className="text-center md:text-left">
-            <h3 className="text-accent font-display text-xl md:text-2xl font-bold mb-3 md:mb-4">
-              James Mills Roofing
-            </h3>
+            <img 
+              src={logo} 
+              alt="J.I.M Roofing & Restoration" 
+              className="h-16 md:h-20 w-auto brightness-0 invert mx-auto md:mx-0 mb-3 md:mb-4"
+            />
             <p className="text-primary-foreground/80 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
               Latrobe Valley's trusted roofing specialists. Professional service, quality workmanship, and peace of mind guaranteed.
             </p>
@@ -70,7 +73,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-8 md:mt-12 pt-6 md:pt-8">
           <p className="text-center text-primary-foreground/60 text-xs md:text-sm">
-            © {new Date().getFullYear()} James Mills Roof Restoration. All rights reserved.
+            © {new Date().getFullYear()} J.I.M Roofing & Restoration. All rights reserved.
           </p>
         </div>
       </div>
