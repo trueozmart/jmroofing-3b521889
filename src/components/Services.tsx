@@ -1,10 +1,12 @@
-import { Search, Sparkles, RotateCcw, Wrench, Paintbrush, Grid3X3, Mountain, Droplets } from "lucide-react";
+import { Search, Sparkles, RotateCcw, Wrench, Paintbrush, Grid3X3, Mountain, Droplets, Home, PanelTop } from "lucide-react";
 
 const services = [
   { icon: Search, title: "Roof Inspection", description: "Comprehensive roof assessments to identify issues early" },
   { icon: Sparkles, title: "Roof Cleaning", description: "High-pressure cleaning to remove moss, lichen and debris" },
   { icon: RotateCcw, title: "Roof Restoration", description: "Complete restoration to extend your roof's lifespan" },
   { icon: Wrench, title: "Roof Repair", description: "Expert repairs for leaks, damage, and wear" },
+  { icon: Home, title: "Re-roofing", description: "Complete roof replacement for aging or damaged roofs" },
+  { icon: PanelTop, title: "Gutter Restoration", description: "Cleaning, repair and restoration of guttering systems" },
   { icon: Paintbrush, title: "Roof Painting", description: "Professional painting with quality coatings" },
   { icon: Grid3X3, title: "Tile Replacement", description: "Matching and replacing cracked or broken tiles" },
   { icon: Mountain, title: "Ridge Capping", description: "Repointing and replacement of ridge caps" },
