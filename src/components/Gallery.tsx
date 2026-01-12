@@ -82,7 +82,7 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
 const galleryImages: GalleryImage[] = [
   {
     src: project6,
-    suburb: "Traralgon",
+    suburb: "Moe",
     service: "Tile Roof Restoration",
   },
   {
@@ -92,62 +92,62 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: project8,
-    suburb: "Moe",
-    service: "Colorbond Roofing",
+    suburb: "Yinnar",
+    service: "Colorbond Re-roofing",
   },
   {
     src: project9,
-    suburb: "Morwell",
+    suburb: "Yinnar",
     service: "Colorbond Re-roofing",
   },
   {
     src: project4,
-    suburb: "Churchill",
+    suburb: "Moe",
     service: "New Tile Installation",
   },
   {
     src: project3,
-    suburb: "Traralgon",
-    service: "Metal Roofing & Solar",
+    suburb: "Churchill",
+    service: "Re-Paint",
   },
   {
     src: project2,
     suburb: "Morwell",
-    service: "Tile Roof Restoration",
+    service: "Tile Re-Roof",
   },
   {
     src: project5,
-    suburb: "Moe",
-    service: "Colorbond Roofing & Gutters",
+    suburb: "Traralgon",
+    service: "Roofing Re-Spray",
   },
   {
     src: project1,
-    suburb: "Yinnar",
-    service: "Tile Replacement",
+    suburb: "Korumburra",
+    service: "Terracotta Tile Restoration",
   },
   {
     src: project10,
-    suburb: "Yinnar",
-    service: "Roof Restoration",
+    suburb: "Morwell",
+    service: "Re-Roof",
   },
   {
     src: project11,
-    suburb: "Churchill",
+    suburb: "Mirboo North",
     service: "Tile Roof Painting",
   },
   {
     src: project12,
-    suburb: "Traralgon",
-    service: "Tile Roof Restoration",
+    suburb: "Mirboo North",
+    service: "Tile Roof Painting",
   },
   {
     src: project13,
-    suburb: "Moe",
+    suburb: "Bass",
     service: "Gutter Guard Installation",
   },
   {
     src: project14,
-    suburb: "Morwell",
+    suburb: "Bass",
     service: "Gutter Guard Installation",
   },
   {
@@ -157,13 +157,13 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: project16,
-    suburb: "Churchill",
-    service: "Tile & Metal Roofing",
+    suburb: "Traralgon",
+    service: "Terracotta Roof Clean",
   },
   {
     src: project17,
-    suburb: "Traralgon",
-    service: "Tile Roof Installation",
+    suburb: "Morwell",
+    service: "Tile Restoration & Re-Paint",
   },
 ];
 
