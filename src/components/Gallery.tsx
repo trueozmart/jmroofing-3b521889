@@ -60,13 +60,13 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
   {
     before: before1,
     after: after1,
-    suburb: "Yinnar",
+    suburb: "Churchill",
     service: "Roof Tile Replacement",
   },
   {
     before: before2,
     after: after2,
-    suburb: "Moe",
+    suburb: "Churchill",
     service: "Full Roof Restoration",
     beforePosition: "center 60%",
     afterPosition: "center 45%",
@@ -75,7 +75,7 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
     before: before3,
     after: after3,
     suburb: "Morwell",
-    service: "Colorbond Re-roofing",
+    service: "Tile Re-Roof",
   },
 ];
 
