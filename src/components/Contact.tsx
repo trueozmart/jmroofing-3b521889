@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section className="section-padding bg-background pb-24 md:pb-16">
+    <section className="section-padding bg-background pb-24 md:pb-16" aria-labelledby="contact-heading">
       <div className="container-custom">
         <div className="max-w-2xl mx-auto">
           {/* Content */}
           <div className="animate-fade-in-up text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
+            <h2 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
               Ready to Get Your Roof Sorted?
             </h2>
             <p className="text-sm md:text-lg text-muted-foreground mb-5 md:mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Whether you need a quick repair, a full restoration, or just honest advice—we're here to help.
+              Whether you need a quick roof repair, a full restoration, or honest roofing advice in Latrobe Valley—we're here to help.
             </p>
 
             {/* Contact Cards */}

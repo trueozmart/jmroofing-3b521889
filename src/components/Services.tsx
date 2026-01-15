@@ -1,29 +1,29 @@
 import { Search, Sparkles, RotateCcw, Wrench, Paintbrush, Grid3X3, Mountain, Droplets, Home, PanelTop } from "lucide-react";
 
 const services = [
-  { icon: Search, title: "Roof Inspection", description: "Comprehensive roof assessments to identify issues early" },
+  { icon: Search, title: "Roof Inspection", description: "Comprehensive roof assessments across Latrobe Valley" },
   { icon: Sparkles, title: "Roof Cleaning", description: "High-pressure cleaning to remove moss, lichen and debris" },
-  { icon: RotateCcw, title: "Roof Restoration", description: "Complete restoration to extend your roof's lifespan" },
-  { icon: Wrench, title: "Roof Repair", description: "Expert repairs for leaks, damage, and wear" },
-  { icon: Home, title: "Re-roofing", description: "Complete roof replacement for aging or damaged roofs" },
+  { icon: RotateCcw, title: "Roof Restoration", description: "Complete tile roof restoration to extend your roof's lifespan" },
+  { icon: Wrench, title: "Roof Repair", description: "Expert roof repairs for leaks, damage, and wear" },
+  { icon: Home, title: "Re-roofing", description: "Full re-roofing services for aging or damaged roofs" },
   { icon: PanelTop, title: "Gutter Restoration", description: "Cleaning, repair and restoration of guttering systems" },
-  { icon: Paintbrush, title: "Roof Painting", description: "Professional painting with quality coatings" },
-  { icon: Grid3X3, title: "Tile Replacement", description: "Matching and replacing cracked or broken tiles" },
+  { icon: Paintbrush, title: "Roof Painting", description: "Professional roof painting with quality coatings" },
+  { icon: Grid3X3, title: "Tile Replacement", description: "Matching and replacing cracked or broken roof tiles" },
   { icon: Mountain, title: "Ridge Capping", description: "Repointing and replacement of ridge caps" },
-  { icon: Droplets, title: "Leak Prevention", description: "Waterproofing and preventive maintenance" },
+  { icon: Droplets, title: "Leak Prevention", description: "Waterproofing and preventive roof maintenance" },
 ];
 
 const Services = () => {
   return (
-    <section className="section-padding bg-section-alt">
+    <section className="section-padding bg-section-alt" aria-labelledby="services-heading">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
             Our Roofing Services
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            Specialising in re-roofing and full restorations, we offer a complete range of professional roofing services for all of the Latrobe Valley.
+            Specialising in re-roofing Gippsland and tile roof restoration, we offer professional roofing services in Yinnar, Moe, Morwell, Traralgon and across Latrobe Valley.
           </p>
         </div>
 

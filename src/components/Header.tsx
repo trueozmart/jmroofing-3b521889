@@ -4,13 +4,13 @@ import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
-      <div className="container-custom flex items-center justify-between h-14 md:h-20 px-4 md:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10" role="banner">
+      <nav className="container-custom flex items-center justify-between h-14 md:h-20 px-4 md:px-8" aria-label="Main navigation">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center" aria-label="James Mills Roof Restoration - Home">
           <img 
             src={logo} 
-            alt="J.I.M Roofing & Restoration" 
+            alt="James Mills Roof Restoration - Latrobe Valley roofing" 
             className="h-10 md:h-14 w-auto"
           />
         </a>
@@ -36,7 +36,7 @@ const Header = () => {
             </Button>
           </a>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };

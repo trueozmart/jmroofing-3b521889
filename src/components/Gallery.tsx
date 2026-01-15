@@ -230,19 +230,18 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="section-padding bg-muted/30" ref={sectionRef}>
+    <section id="gallery" className="section-padding bg-muted/30" ref={sectionRef} aria-labelledby="gallery-heading">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-14">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
             Our Work
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 id="gallery-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             See the Transformation
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Browse our completed roofing projects across the Latrobe Valley. 
-            Drag the slider to compare before and after results.
+            Browse our completed roof restoration and re-roofing projects in Moe, Morwell, Traralgon, Churchill and across Latrobe Valley.
           </p>
         </div>
 
@@ -280,7 +279,7 @@ const Gallery = () => {
           >
             <img
               src={galleryImages[currentImageIndex].src}
-              alt={`${galleryImages[currentImageIndex].suburb} - ${galleryImages[currentImageIndex].service}`}
+              alt={`${galleryImages[currentImageIndex].service} in ${galleryImages[currentImageIndex].suburb} - Latrobe Valley roofing project by James Mills`}
               className="w-full h-full object-cover transition-opacity duration-300"
               loading="eager"
               fetchPriority="high"
@@ -369,7 +368,7 @@ const Gallery = () => {
             >
               <img
                 src={galleryImages[currentImageIndex].src}
-                alt={`${galleryImages[currentImageIndex].suburb} - ${galleryImages[currentImageIndex].service}`}
+                alt={`${galleryImages[currentImageIndex].service} in ${galleryImages[currentImageIndex].suburb} - Professional roofing Gippsland`}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg"
               />
               

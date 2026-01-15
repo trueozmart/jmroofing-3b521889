@@ -5,16 +5,20 @@ import heroImageMobile from "@/assets/hero-roofer-mobile.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-16 md:pt-20">
+    <section className="relative min-h-[100svh] flex items-center pt-16 md:pt-20" aria-label="Hero section - Latrobe Valley Roofing Specialists">
       {/* Background Image - Mobile */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{ backgroundImage: `url(${heroImageMobile})` }}
+        role="img"
+        aria-label="Professional roof restoration work in Latrobe Valley"
       />
       {/* Background Image - Desktop */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{ backgroundImage: `url(${heroImage})` }}
+        role="img"
+        aria-label="James Mills Roof Restoration team working on tile roof in Gippsland"
       />
 
       {/* Gradient Overlay */}
@@ -52,7 +56,7 @@ const Hero = () => {
             className="text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up text-shadow-subtle font-medium leading-relaxed"
             style={{ animationDelay: "0.2s" }}
           >
-            Our Team Are All Trade-Qualified Roof Tilers, & We Service All Of The Latrobe Valley.
+            Trade-qualified roof tilers servicing Moe, Morwell, Traralgon, Churchill & all of the Latrobe Valley.
           </p>
 
           {/* CTA Button - Large touch target for mobile */}
