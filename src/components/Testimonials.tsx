@@ -189,15 +189,15 @@ const Testimonials = () => {
   const remainingCount = testimonials.length - INITIAL_COUNT;
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-background" aria-labelledby="testimonials-heading">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
+          <h2 id="testimonials-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
             What Our Customers Say
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            Real reviews from real customers across Gippsland. See why locals trust us with their roofs.
+            Real roofing reviews from customers in Morwell, Traralgon, Moe, Churchill and across Gippsland.
           </p>
         </div>
 

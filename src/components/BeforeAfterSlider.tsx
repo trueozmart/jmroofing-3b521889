@@ -56,7 +56,7 @@ const BeforeAfterSlider = ({
         {/* After Image (Background) */}
         <img
           src={afterImage}
-          alt="After"
+          alt={`After ${service} - ${suburb}, Latrobe Valley roofing project`}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: afterPosition }}
           loading="lazy"
@@ -69,7 +69,7 @@ const BeforeAfterSlider = ({
         >
           <img
             src={beforeImage}
-            alt="Before"
+            alt={`Before ${service} - ${suburb}, Gippsland roof restoration`}
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: beforePosition }}
             loading="lazy"

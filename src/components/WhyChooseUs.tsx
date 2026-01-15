@@ -3,39 +3,38 @@ import { CheckCircle2, Wrench, MessageCircle } from "lucide-react";
 const features = [
   {
     icon: CheckCircle2,
-    title: "Experienced Local Specialists",
+    title: "Experienced Local Roofing Specialists",
     description:
-      "We understand Latrobe Valley's unique weather conditions, from harsh winters to summer heat. Our team has the expertise to handle it all.",
+      "We understand Latrobe Valley's unique weather conditions, from harsh winters to summer heat. Our Gippsland roofing team has the expertise to handle it all.",
     colorClass: "icon-badge-blue",
   },
   {
     icon: Wrench,
     title: "Quality Materials for Aussie Conditions",
     description:
-      "We use premium materials specifically selected for Australian conditions, ensuring your roof stands the test of time.",
+      "We use premium Colorbond and tile roofing materials specifically selected for Australian conditions, ensuring your roof stands the test of time.",
     colorClass: "icon-badge-green",
   },
   {
     icon: MessageCircle,
     title: "Honest, No-Pressure Service",
     description:
-      "Clear explanations, honest recommendations, no unnecessary upselling. Just straightforward advice you can trust.",
+      "Clear explanations, honest recommendations, no unnecessary upselling. Just straightforward roofing advice you can trust.",
     colorClass: "icon-badge-purple",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-background" aria-labelledby="why-choose-heading">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
+          <h2 id="why-choose-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3 md:mb-4 font-display">
             Why Latrobe Valley Homeowners Choose Us
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
-            Servicing all of the Latrobe Valley, homeowners turn to us for re-roofing work backed by decades of hands-on
-            experience and a fully trade-qualified team.
+            Homeowners in Moe, Morwell, Traralgon and across Gippsland trust us for re-roofing and roof restoration backed by decades of hands-on experience.
           </p>
         </div>
 

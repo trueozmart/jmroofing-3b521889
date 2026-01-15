@@ -4,41 +4,41 @@ import { Button } from "@/components/ui/button";
 const steps = [
   {
     number: 1,
-    title: "Call or Book Your Free Inspection",
-    description: "Get in touch and we'll arrange a time that suits you. No obligation, just honest advice.",
+    title: "Call or Book Your Free Roof Inspection",
+    description: "Get in touch and we'll arrange a time that suits you. Free inspections across Latrobe Valley.",
   },
   {
     number: 2,
     title: "Clear Explanation of Issues & Options",
     description:
-      "We'll show you exactly what's going on and explain your options in plain English. No jargon, no upselling.",
+      "We'll show you exactly what's going on and explain your roofing options in plain English. No jargon, no upselling.",
   },
   {
     number: 3,
     title: "Fast, Professional Workmanship",
     description:
-      "Our experienced crews work efficiently and respectfully, treating your home with care every step of the way.",
+      "Our experienced Gippsland roofing crews work efficiently and respectfully, treating your home with care.",
   },
   {
     number: 4,
     title: "Thorough Clean-Up & Final Walkthrough",
     description:
-      "We leave your property spotless and walk you through the completed work. Your confidence is our priority.",
+      "We leave your property spotless and walk you through the completed roofing work. Your confidence is our priority.",
   },
 ];
 
 const HowWeWork = () => {
   return (
-    <section className="section-padding bg-section-alt">
+    <section className="section-padding bg-section-alt" aria-labelledby="how-we-work-heading">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto">
           {/* Content */}
           <div className="animate-fade-in-up text-center lg:text-left" style={{ animationDelay: "0.1s" }}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
+            <h2 id="how-we-work-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2 md:mb-3 font-display">
               How We Work
             </h2>
             <p className="text-sm md:text-lg text-muted-foreground mb-5 md:mb-6 leading-relaxed">
-              No surprises. No pressure. Just honest roofing service from start to finish.
+              No surprises. No pressure. Just honest roofing service across Latrobe Valley from start to finish.
             </p>
 
             {/* Steps */}
