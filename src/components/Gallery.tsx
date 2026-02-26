@@ -26,6 +26,8 @@ import project14 from "@/assets/gallery/project-14.jpg";
 import project15 from "@/assets/gallery/project-15.jpg";
 import project16 from "@/assets/gallery/project-16.jpg";
 import project17 from "@/assets/gallery/project-17.jpg";
+import project18 from "@/assets/gallery/project-18.jpg";
+import project19 from "@/assets/gallery/project-19.jpg";
 
 // Track preloaded images to avoid duplicate requests
 const preloadedImages = new Set<string>();
@@ -80,6 +82,16 @@ const beforeAfterPairs: (BeforeAfterPair & { beforePosition?: string; afterPosit
 ];
 
 const galleryImages: GalleryImage[] = [
+  {
+    src: project18,
+    suburb: "Yinnar",
+    service: "Full Roof Restoration",
+  },
+  {
+    src: project19,
+    suburb: "Yinnar",
+    service: "Full Roof Restoration",
+  },
   {
     src: project6,
     suburb: "Moe",
