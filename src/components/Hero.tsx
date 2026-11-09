@@ -42,7 +42,7 @@ const Hero = () => {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground mb-2 md:mb-3 animate-fade-in-up text-shadow-hero font-display"
             style={{ animationDelay: "0.1s" }}
           >
-            James Mills <span className="text-accent drop-shadow-lg">Roof Restoration</span>
+            Roof Restoration &amp; Repairs <span className="text-accent drop-shadow-lg">Latrobe Valley</span>
           </h1>
 
           {/* Subheadline */}

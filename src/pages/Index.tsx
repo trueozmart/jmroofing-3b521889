@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileCallBar from "@/components/MobileCallBar";
 
+import LocalMap from "@/components/LocalMap";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -22,6 +23,7 @@ const Index = () => {
         <Testimonials />
         <Contact />
       </main>
+      <LocalMap />
       <Footer />
       <MobileCallBar />
     </div>
